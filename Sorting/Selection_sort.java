@@ -6,7 +6,13 @@
  * unsorted array then will replace it with last element of array and vice versa.
  * 
  * Steps takes place in selection sort
- * Step 1: 
+ * Step 1: Set last pointer to (n-1) where n is length of array.
+ * Step 2: Now pick largest element from the array the place it on end of array.
+ * Step 3: Decrement last pointer as last element of array is sorted, so our unsorted 
+ *         array reduces by 1 element.
+ * Step 4: Now pick the largest element from unsorted array and replace it with last 
+ *         element of unsorted array. 
+ * Step 5: Now decrement the Last pointer and repeat from step 2
  */
 public class Selection_sort
 {
