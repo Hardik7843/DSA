@@ -12,7 +12,7 @@
  *         array reduces by 1 element.
  * Step 4: Now pick the largest element from unsorted array and replace it with last 
  *         element of unsorted array. 
- * Step 5: Now decrement the Last pointer and repeat from step 2
+ * Step 5: Now decrement the Last pointer and repeat from step 2.
  */
 public class Selection_sort
 {
