@@ -18,7 +18,14 @@
  *         else right's elements will be placed.
  * Step 6: while performing step 5 if any one from right or left array gets complited then remaining elements
  *         from the other array must be put into merged array.
- */        
+ */   
+
+/*
+ * Arrays.copyOfRange() is a method from array class it used to copy the array elements 
+ * in a range. the range can be specified by using two variables "from" and "to"
+ * "from" specifies the start index (inclusive)
+ * "to" specifies the last index (exclusive)
+ */
 import java.util.Arrays;
 
 public class Merg_sort_recursion 
