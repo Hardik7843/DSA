@@ -28,9 +28,6 @@
  *         element at loop pointer (i)
  * by repeating this steps will give us the sorted array.
  * Note : this algorithim can only handle array with distinct element.
- * 
- * 
- * Step 3s
  */
 
 
