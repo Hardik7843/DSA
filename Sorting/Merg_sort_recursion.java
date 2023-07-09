@@ -20,6 +20,7 @@
  *         from the other array must be put into merged array.
  */   
 
+ 
 /*
  * Arrays.copyOfRange() is a method from array class it used to copy the array elements 
  * in a range. the range can be specified by using two variables "from" and "to"
