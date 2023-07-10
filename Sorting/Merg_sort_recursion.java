@@ -8,7 +8,7 @@
  * 
  * Steps for mergesort 
  * Step 1: Take the input array for seperating it into two parts.
- *         if it only one element then direct return it. else calculate
+ *         if it contains only one element then direct return it. else calculate
  *         mid position from where we need to divide the array.
  * Step 2: Now give array (from start to mid) [mid exclusive] to 1st call of "mergesort" function (Left Array)
  *         and pass the array (from mid to end) [end exclusive] to 2nd call of "mergesort" function (Right Array)
@@ -95,7 +95,11 @@ public class Merg_sort_recursion
     }
 
 
-
+/*
+ * Mergesort inplace:
+ * Idea : Instead of passing copyofarray jusst pass the index to mergeinplce and mergsortinplace operation.
+ * 
+ */
     private static void mergsortinplace(int[] arr , int s ,int e)
     {
         if(e - s == 1)
@@ -109,13 +113,16 @@ public class Merg_sort_recursion
         mergsortinplace(arr, mid, e);
 
         mergeinplace(arr , s , mid , e);
-
     }
 
     private static void mergeinplace(int[] arr, int s , int mid , int e) 
     {
+        // this merger array is created from the original array.
+        // by using mergsort techniques but as we doing inplace operation that's why 
+        // we need to modify the original array instead of returning mix(merged) array
+        // thus will copy elements of mix array one by one into original array.
         int[] mix = new int[e-s];
-
+        
         int i = s;
         int j = mid;
         int k = 0;
@@ -149,6 +156,8 @@ public class Merg_sort_recursion
             k++;
         }
 
+        // here is a for loop to copy the elements of mix array into 
+        // original array 
         for(int l =0 ; l < mix.length ; l++)
         {
             arr[s+l] = mix[l];
