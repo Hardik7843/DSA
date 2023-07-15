@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-import javax.xml.namespace.QName;
+// import javax.xml.namespace.QName;
  
 public class SinglyLinkedList
 {
@@ -14,11 +14,19 @@ public class SinglyLinkedList
                         // allocating size
     }
 
+    /*
+     * Inserting element at starting index of linked list
+     * What is needed: 
+     *  => Creation of new node to put new element
+     *  => Shift head to new node
+     *  => 
+     */
+    
     public void insertFirst(int val)
     {
-        Node node = new Node(val);     // this will add elements at the
-        node.next = head;              // very first node i.e before head
-        head = node;                   // 
+        Node node = new Node(val);     
+        node.next = head;              
+        head = node;                   
         if(tail == null)
         {
             tail=head;
@@ -30,7 +38,7 @@ public class SinglyLinkedList
     {
         if(tail == null)
         {
-            insertFirst(val);
+            insertFirst(val); 
         }
         else
         {
